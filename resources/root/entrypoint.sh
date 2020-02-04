@@ -19,4 +19,6 @@ git clone git@github.com:"${INPUT_MAIN_REPO}".git /tmp/split
 
 cd /tmp/split
 
-git subtree push --prefix web "${INPUT_DOKKU_REPO}" "${INPUT_BRANCH}"
+git checkout "${INPUT_BRANCH}"
+
+git subtree push --prefix web "${INPUT_DOKKU_REPO}" master

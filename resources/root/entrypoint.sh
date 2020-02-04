@@ -17,8 +17,6 @@ ssh-add /root/.ssh/deploy_key
 
 git clone git@github.com:"${INPUT_MAIN_REPO}".git /tmp/split
 
-git chechout "${INPUT_BRANCH}"
-
 cd /tmp/split
 
-git subtree push --prefix web "${INPUT_DOKKU_REPO}" master
+git subtree push --prefix web "${INPUT_DOKKU_REPO}" "${INPUT_BRANCH}"
